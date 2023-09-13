@@ -8,7 +8,7 @@ let shuttleSpeed = 15000;
 // 3) Write conditional expressions to satisfy the following safety rules:
 
 // a) If crewStatus is true, print "Crew Ready" else print "Crew Not Ready".
-if (crewSatus) {
+if (crewStatus) {
     console.log("Crew Ready")
 } else {
     console.log("Crew Not Ready")
