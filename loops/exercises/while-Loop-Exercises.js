@@ -23,3 +23,34 @@
 /*Exercise #5: Output the result with the phrase, “The shuttle gained an altitude of ___ km.”
 
 If the altitude is 2000 km or higher, add “Orbit achieved!” Otherwise add, “Failed to reach orbit.”*/
+const input = require('readline-sync')
+
+
+let fuelLevel = 0
+let numAstronauts = 0
+let altitude = 0;
+
+fuelLevel = input.question("Enter the starting fuel level: ")
+while (fuelLevel <= 5000 || fuelLevel > 30000 || isNaN(fuelLevel)) {
+   fuelLevel = input.question("Enter the starting fuel level: ");
+}
+
+numAstronauts = input.question('How many astronauts are on board? ')
+while (numAstronauts < 1 || numAstronauts > 7) {
+    numAstronauts = input.question('How many astronauts are on board? ')
+}
+
+while (fuelLevel - 100*numAstronauts >= 0) {
+    fuelLevel -= 100 * numAstronauts
+    altitude += 50
+}
+
+let result = `The shuttle gained an altitude of ${altitude} km.`
+
+if( altitude >= 2000) {
+   result += ' Orbit achieved!'
+} else {
+   result += ' Failed to reach orbit.'
+}
+
+console.log(result)
