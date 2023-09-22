@@ -30,9 +30,15 @@ meals.push(meal)
 
 
 function askForNumber() {
-  numMeals = input.question("How many meals would you like to make?");
+ let numMeals;
   
   /// CODE YOUR SOLUTION TO PART B here ///
+  while (numMeals < 1 || numMeals > 6) {
+    numMeals = Number(input.question("Please enter a number from 1 to 6. How many meals would you like to make?"))
+    
+  }
+
+
 
   return numMeals;
 }
@@ -84,4 +90,3 @@ module.exports = {
   generatePassword: generatePassword,
   runProgram: runProgram
 };
-runProgram();
