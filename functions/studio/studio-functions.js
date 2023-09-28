@@ -75,6 +75,18 @@ console.log(completeReversal(arrayTest3))
 // 1. Outside of the function, define the variable str and initialize it with a string (e.g. 'Functions rock!').
 // 2. Call your function and print the returned phrase.
 
+let str = 'Functions rock!'
+let newStr = ''
+function funPhrase(str) {
+  if (str.length <= 3) {
+    newStr = str.slice(str.length - 1)
+  } else {
+    newStr = str.slice(0,3)
+  }
+ return console.log(`We put the ${newStr} in ${str}.`)
+}
+funPhrase(str)
+
 // Area of rectangle equal to length x width
 
 // 1. Define a function with the required parameters to calculate the area of a rectangle.
@@ -82,3 +94,28 @@ console.log(completeReversal(arrayTest3))
 // 3. Call your area function by passing in two arguments - the length and width.
 // 4. If only one argument is passed to the function, then the shape is a square. Modify your code to deal with this case.
 // 5. Use a template literal to print, “The area is ____ cm^2.”
+
+let area;
+
+function areaOfTriangle(length, width) {
+  if(width === undefined) {
+   return area = length * length
+    
+  } else if (length === undefined) {
+  return area = width * width
+    
+  } else {
+    return area = length * width
+    
+  }
+  
+}
+
+areaOfTriangle(2,4)
+console.log(`The area is ${area} cm^2.`)
+
+areaOfTriangle(14,7)
+console.log(`The area is ${area} cm^2.`)
+
+areaOfTriangle(20)
+console.log(`The area is ${area} cm^2.`)
