@@ -46,6 +46,8 @@ console.log("Hold status: " + holdStatus(cargoHold));
 
 //d). Don’t get hasty, matey! Remember to test your function.
 
+
+
 /* Finally, you need to print a receipt for the accountant. Don’t laugh! That genius knows MATH and saves us more gold than you can imagine.
  * /
  
@@ -55,3 +57,21 @@ console.log("Hold status: " + holdStatus(cargoHold));
 
 //c). Use a template literal to return, "Raided _____ kg of fuel from the tanks, and stole ____ and ____ from the cargo hold."
 
+*/
+
+let newArr = []
+
+
+let items = function(arr) {
+  
+newArr.push(cargoHold[4])
+newArr.push(cargoHold[0])
+
+cargoHold.splice(0,1, 'my bank account')
+cargoHold.splice(4, 1, 'gold foil wrapped chocololate coins')
+
+  return newArr
+}
+
+console.log(items(cargoHold))
+console.log(cargoHold)
