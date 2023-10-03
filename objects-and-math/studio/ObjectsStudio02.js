@@ -55,4 +55,36 @@ let candidateA = {
  };
  
  let crew = [candidateA,candidateC,candidateE];
+
+ let circum = 0
+
+function orbitCircumference(r) {
+
+return circum = Math.round(Math.PI * 2 * r)
+}
+
+console.log(orbitCircumference(2000))
+
+ let speed = 28000
+ let radius = 2000
+
+ function missionDuration (numOrbits, rad, speed) {
+
+  let totalKm = numOrbits * orbitCircumference(rad)
+  let orbitTime = totalKm/speed
+
+  return Math.round(orbitTime * 100)/100
+}
+
+console.log(missionDuration(5, 2000, 28000))
+
+ 
+let spacewalkHrs = 0
+
+ function oxygenExpended(object) {
+  spacewalkHrs = missionDuration(3, 200, 28000)
+  return totalO2 = Math.round(object.o2Used(spacewalkHrs)*1000)/1000
+}
+
+ console.log(oxygenExpended(candidateD))
  
