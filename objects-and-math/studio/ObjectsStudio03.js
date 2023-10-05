@@ -51,4 +51,27 @@ let candidateA = {
  };
  
  let crew = [candidateB,candidateD,candidateF];
- 
+
+
+
+function crewMass(arr) {
+  return totalMass = arr[0].mass + arr[1].mass + arr[2].mass
+}
+
+ let rocketMass = 75000
+ let fuelNeeded
+ function fuelRequired(allMass, rocketMass) {
+    fuelNeeded = (allMass + rocketMass) * 9.5
+    
+    for(let i = 0; i < crew.length; i++) {
+        if (crew[i].species === 'dog' || crew[i].species === 'cat') {
+          fuelNeeded += 200
+        } else {
+          fuelNeeded += 100
+        }
+      
+      }
+      console.log(`The mission has a launch mass of ${allMass + rocketMass} kg and requires ${fuelNeeded} kg of fuel.`)
+  return fuelNeeded
+    }
+    console.log(fuelRequired(crewMass(crew), rocketMass))
