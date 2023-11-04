@@ -14,9 +14,19 @@
 		}
 		document.getElementById('searchForm').setAttribute('action', actions[selected.value]);
 	}
+
+
     window.addEventListener("load", function(){
        let handler = document.getElementById('searchForm');
-	   handler.addEventListener('submit', setSearchEngine);
+	   handler.addEventListener('submit', function(event) {
+		let checkRadio = document.querySelector('input[name="engine"]:checked');
+		if(!checkRadio) {
+			alert('Please select a search engine.')
+			event.preventDefault();
+		} else {
+			setSearchEngine()
+		}
+	   });
     });
 	</script>
 </head>
